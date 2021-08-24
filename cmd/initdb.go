@@ -26,7 +26,7 @@ func init() {
 
 func initDBCmdRun(cmd *cobra.Command, args []string) {
 	log.Println(" start init mysql db tables")
-	db.InitDbConn(initdbtype, initdburl)
+	db.InitDbConn(initdbtype, DbUrl)
 	if db.InitTables() != nil {
 		log.Println("init mysql db tables failed !!!!")
 	}
